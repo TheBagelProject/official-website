@@ -40,7 +40,7 @@ const Hero = () => {
 
             {/* CTA Button */}
             <div className="flex justify-center lg:justify-start pt-4 animate-fade-in">
-              <button className="group bg-gradient-to-r from-warm-yellow to-golden-brown text-neutral-gray px-8 py-3 rounded-2xl font-medium hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+              <button className="group w-full sm:w-auto bg-gradient-to-r from-warm-yellow to-golden-brown text-neutral-gray px-8 py-3 rounded-2xl font-medium hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2">
                 <Zap className="h-4 w-4" />
                 Get Started with Bagel
                 <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />

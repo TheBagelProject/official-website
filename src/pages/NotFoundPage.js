@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Home, ArrowLeft } from 'lucide-react';
 
 const NotFoundPage = () => {
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="min-h-screen pt-20 pb-12 flex items-center justify-center">
       <div className="max-w-md mx-auto text-center px-6">

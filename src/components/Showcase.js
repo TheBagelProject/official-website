@@ -1,5 +1,5 @@
 import React from 'react';
-import { Play, Monitor, Smartphone } from 'lucide-react';
+import { Play, Server, Users, MousePointer, Shield } from 'lucide-react';
 
 const Showcase = () => {
   return (
@@ -88,9 +88,10 @@ const Showcase = () => {
             {/* Features List */}
             <div className="space-y-4">
               {[
-                { icon: <Monitor className="h-5 w-5" />, text: "Responsive design that works everywhere" },
-                { icon: <Smartphone className="h-5 w-5" />, text: "Mobile-friendly deployment management" },
-                { icon: <Play className="h-5 w-5" />, text: "One-click infrastructure provisioning" }
+                { icon: <Server className="h-5 w-5" />, text: "Self-hosted for complete control" },
+                { icon: <Shield className="h-5 w-5" />, text: "All of the data stays with you" },
+                { icon: <Users className="h-5 w-5" />, text: "User-friendly interface for everyone" },
+                { icon: <MousePointer className="h-5 w-5" />, text: "Minimal clicks, maximum efficiency" }
               ].map((item, index) => (
                 <div key={index} className="flex items-center gap-4">
                   <div className="p-2 rounded-xl bg-warm-yellow/10 text-warm-yellow">
