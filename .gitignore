@@ -20,8 +20,11 @@ node_modules/
 # Google Sheets setup (contains sensitive setup instructions)
 GOOGLE_SHEETS_SETUP.md
 
-# Google Sheets setup (contains sensitive setup instructions)
-GOOGLE_SHEETS_SETUP.md
+# Firebase
+.firebase/
+.firebaserc
+firebase-debug.log*
+.firebase-debug.log*
 
 # Logs
 npm-debug.log*
@@ -185,3 +188,25 @@ storybook-static
 !/src/
 /src/**/*.css.map
 /src/**/*.js.map
+
+# Deployment and hosting
+*.tgz
+*.tar.gz
+
+# Runtime configuration
+.env.*.local
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Package manager lock files (comment out the one you're not using)
+# package-lock.json
+# yarn.lock
+
+# Build artifacts
+build/
+dist/
+*.log
