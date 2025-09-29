@@ -1,5 +1,7 @@
 # 🥯 Bagel
 
+[![Deploy Status](https://github.com/TheBagelProject/official-website/actions/workflows/firebase-hosting-merge.yml/badge.svg)](https://github.com/TheBagelProject/official-website/actions)
+
 <div align="center">
   <img src="./Logo/Bagel-v1.0.1-DarkMode.png" alt="Bagel Logo" width="200"/>
   
