@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import HowItWorks from './components/HowItWorks';
-import Features from './components/Features';
-import Showcase from './components/Showcase';
-import HowToGetStarted from './components/HowToGetStarted';
-import WaitlistForm from './components/WaitlistForm';
-import Team from './components/Team';
-import OpenSource from './components/OpenSource';
+import HomePage from './pages/HomePage';
+import WaitlistPage from './pages/WaitlistPage';
+import NotFoundPage from './pages/NotFoundPage';
 import Footer from './components/Footer';
 
 function App() {
@@ -29,22 +25,21 @@ function App() {
   };
 
   return (
-    <div className={`min-h-screen transition-colors duration-300 ${
-      darkMode 
-        ? 'bg-dark-gray text-cream' 
-        : 'bg-cream text-neutral-gray'
-    }`}>
-      <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
-      <Hero />
-      <HowItWorks />
-      <Features />
-      <Showcase />
-      <HowToGetStarted />
-      <WaitlistForm />
-      <Team />
-      <OpenSource />
-      <Footer />
-    </div>
+    <Router>
+      <div className={`min-h-screen transition-colors duration-300 ${
+        darkMode 
+          ? 'bg-dark-gray text-cream' 
+          : 'bg-cream text-neutral-gray'
+      }`}>
+        <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/waitlist" element={<WaitlistPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

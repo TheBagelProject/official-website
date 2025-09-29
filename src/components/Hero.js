@@ -1,11 +1,15 @@
 import React from 'react';
 import { ArrowRight, Zap } from 'lucide-react';
+import { BackgroundPaths } from './ui/background-paths';
 
 const Hero = () => {
   return (
-    <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[60vh]">
+    <section className="relative pt-24 pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      {/* Animated Background */}
+      <BackgroundPaths />
+      
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
           {/* Logo Section */}
           <div className="flex justify-center lg:justify-start animate-fade-in">
             <img 
@@ -30,27 +34,27 @@ const Hero = () => {
               </h1>
               
               <p className="text-lg md:text-xl text-neutral-gray/80 dark:text-cream/80 leading-relaxed">
-                Bagel makes deploying Terraform seamless — no workflow knowledge required.
+                Bagel makes deploying Terraform seamless - no workflow knowledge required.
               </p>
             </div>
 
             {/* CTA Button */}
             <div className="flex justify-center lg:justify-start pt-4 animate-fade-in">
-              <button className="group bg-gradient-to-r from-warm-yellow to-golden-brown text-neutral-gray px-8 py-4 rounded-2xl font-semibold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center gap-3">
-                <Zap className="h-5 w-5" />
+              <button className="group bg-gradient-to-r from-warm-yellow to-golden-brown text-neutral-gray px-8 py-3 rounded-2xl font-medium hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+                <Zap className="h-4 w-4" />
                 Get Started with Bagel
-                <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </button>
             </div>
           </div>
         </div>
 
         {/* Subtle breadshop elements */}
-        <div className="absolute top-1/2 left-10 opacity-5 dark:opacity-10 -z-10">
-          <div className="w-32 h-32 rounded-full bg-warm-yellow animate-bounce-subtle"></div>
+        <div className="absolute top-1/2 left-10 opacity-10 dark:opacity-15 z-0">
+          <div className="w-32 h-32 rounded-full bg-warm-yellow/30 animate-bounce-subtle"></div>
         </div>
-        <div className="absolute top-1/3 right-10 opacity-5 dark:opacity-10 -z-10">
-          <div className="w-24 h-24 rounded-full bg-golden-brown animate-bounce-subtle" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/3 right-10 opacity-10 dark:opacity-15 z-0">
+          <div className="w-24 h-24 rounded-full bg-golden-brown/30 animate-bounce-subtle" style={{ animationDelay: '1s' }}></div>
         </div>
       </div>
     </section>

@@ -278,16 +278,16 @@ const WaitlistForm = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="inline-flex items-center gap-3 bg-gradient-to-r from-warm-yellow to-golden-brown text-neutral-gray px-8 py-4 rounded-2xl font-semibold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-warm-yellow to-golden-brown text-neutral-gray px-8 py-3 rounded-2xl font-medium hover:shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? (
                   <>
-                    <Loader className="h-5 w-5 animate-spin" />
+                    <Loader className="h-4 w-4 animate-spin" />
                     Joining Waitlist...
                   </>
                 ) : (
                   <>
-                    <Mail className="h-5 w-5" />
+                    <Mail className="h-4 w-4" />
                     Join the Waitlist
                   </>
                 )}
