@@ -3,7 +3,7 @@ import { Play, Server, Users, MousePointer, Shield } from 'lucide-react';
 
 const Showcase = () => {
   return (
-    <section id="showcase" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-cream/50 to-warm-yellow/10 dark:from-dark-gray/50 dark:to-neutral-gray/20">
+    <section id="showcase" className="py-20 px-8 sm:px-12 lg:px-16 bg-gradient-to-br from-cream/50 to-warm-yellow/10 dark:from-dark-gray/50 dark:to-neutral-gray/20">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">

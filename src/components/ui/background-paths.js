@@ -48,7 +48,7 @@ function FloatingPaths({ position }) {
 
 export function BackgroundPaths() {
     return (
-        <div className="absolute inset-0 w-full h-[150vh] pointer-events-none overflow-visible">
+        <div className="absolute inset-0 w-full h-[100vh] md:h-[120vh] lg:h-[150vh] pointer-events-none overflow-visible">
             {/* Main animation area with extended height */}
             <div className="absolute inset-0 w-full h-full">
                 <div className="absolute inset-0 opacity-70 dark:opacity-50">

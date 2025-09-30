@@ -142,7 +142,7 @@ const WaitlistForm = () => {
 
   if (showSuccess) {
     return (
-      <section id="waitlist" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-warm-yellow/5 to-golden-brown/5 dark:from-warm-yellow/2 dark:to-golden-brown/2">
+      <section id="waitlist" className="py-20 px-8 sm:px-12 lg:px-16 bg-gradient-to-br from-warm-yellow/5 to-golden-brown/5 dark:from-warm-yellow/2 dark:to-golden-brown/2">
         <div className="max-w-3xl mx-auto text-center">
           <div className="bg-white/70 dark:bg-neutral-gray/50 backdrop-blur-sm rounded-3xl p-12 border border-neutral-gray/10 dark:border-cream/10">
             <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-6" />
@@ -165,7 +165,7 @@ const WaitlistForm = () => {
   }
 
   return (
-    <section id="waitlist" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-warm-yellow/5 to-golden-brown/5 dark:from-warm-yellow/2 dark:to-golden-brown/2">
+    <section id="waitlist" className="py-20 px-8 sm:px-12 lg:px-16 bg-gradient-to-br from-warm-yellow/5 to-golden-brown/5 dark:from-warm-yellow/2 dark:to-golden-brown/2">
       <div className="max-w-4xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12">

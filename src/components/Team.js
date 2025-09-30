@@ -1,61 +1,111 @@
 import React from 'react';
 import { Github, Linkedin, Coffee } from 'lucide-react';
 
+// Behance Icon Component using custom SVG file
+const BehanceIcon = ({ className }) => (
+  <svg 
+    className={className}
+    xmlns="http://www.w3.org/2000/svg" 
+    width="24" 
+    height="24" 
+    viewBox="0 0 24 24"
+  >
+    <path 
+      fill="currentColor" 
+      d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14h-8.027c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988h-6.466v-14.967h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zm-3.466-8.988h3.584c2.508 0 2.906-3-.312-3h-3.272v3zm3.391 3h-3.391v3.016h3.341c3.055 0 2.868-3.016.05-3.016z"
+    />
+  </svg>
+);
+
+// Hashnode Icon Component
+const HashnodeIcon = ({ className }) => (
+  <svg 
+    className={className}
+    xmlns="http://www.w3.org/2000/svg" 
+    width="24" 
+    height="24" 
+    viewBox="0 0 48 48"
+  >
+    <path 
+      fill="currentColor" 
+      d="M42.164,17.126l-11.29,-11.291c-3.781,-3.781 -9.967,-3.781 -13.748,0l-11.29,11.291c-3.781,3.781 -3.781,9.967 0,13.748l11.291,11.291c3.781,3.781 9.967,3.781 13.748,0l11.291,-11.291c3.779,-3.781 3.779,-9.967 -0.002,-13.748zM24,31c-3.866,0 -7,-3.134 -7,-7c0,-3.866 3.134,-7 7,-7c3.866,0 7,3.134 7,7c0,3.866 -3.134,7 -7,7z"
+    />
+  </svg>
+);
+
+// X (Twitter) Icon Component
+const XIcon = ({ className }) => (
+  <svg 
+    className={className}
+    xmlns="http://www.w3.org/2000/svg" 
+    width="24" 
+    height="24" 
+    viewBox="0 0 50 50"
+  >
+    <path 
+      fill="currentColor" 
+      d="M 11 4 C 7.134 4 4 7.134 4 11 L 4 39 C 4 42.866 7.134 46 11 46 L 39 46 C 42.866 46 46 42.866 46 39 L 46 11 C 46 7.134 42.866 4 39 4 L 11 4 z M 13.085938 13 L 21.023438 13 L 26.660156 21.009766 L 33.5 13 L 36 13 L 27.789062 22.613281 L 37.914062 37 L 29.978516 37 L 23.4375 27.707031 L 15.5 37 L 13 37 L 22.308594 26.103516 L 13.085938 13 z M 16.914062 15 L 31.021484 35 L 34.085938 35 L 19.978516 15 L 16.914062 15 z"
+    />
+  </svg>
+);
+
 const Team = () => {
-  // Placeholder team members - you can replace with actual data
   const teamMembers = [
     {
       name: "Aftab S",
-      role: "Founder & CEO",
-      bio: "Former DevOps engineer who dreamed of making infrastructure accessible to everyone.",
-      image: "/team/member1.jpg", // You'll add actual images here
-      github: "https://github.com/alexchen",
-      linkedin: "https://linkedin.com/in/alexchen"
+      role: "Creator",
+      bio: "DevOps chef baking infrastructure magic for everyone. Loves sprinkling open-source goodness and building a tasty community.",
+      image: "/team/member1.jpg",
+      github: "https://github.com/aftab-s",
+      linkedin: "https://www.linkedin.com/in/aftab-s/",
+      hashnode: "https://aftabs.hashnode.dev/",
+      x: "https://x.com/aftab_mehrab"
     },
     {
       name: "Sangeeth Promod",
-      role: "Head of Engineering",
-      bio: "Full-stack developer with a passion for elegant solutions and beautiful code.",
+      role: "Contributor",
+      bio: "Head of Engineering who layers elegant code like a perfectly toasted bagel. Keeps the backend fresh and smooth.",
       image: "/team/member2.jpg",
       github: "https://github.com/sarahjohnson",
       linkedin: "https://linkedin.com/in/sarahjohnson"
     },
     {
       name: "Akhil Sasi",
-      role: "Lead Designer",
-      bio: "UI/UX designer who believes infrastructure tools should be as beautiful as they are functional.",
+      role: "Contributor",
+      bio: "Lead Designer spreading the cream cheese of UI/UX over every interface. Believes infrastructure should look as good as it works.",
       image: "/team/member3.jpg",
-      github: "https://github.com/marcusrodriguez",
-      linkedin: "https://linkedin.com/in/marcusrodriguez"
+      github: "https://github.com/akhilsasic",
+      linkedin: "https://www.linkedin.com/in/akhil-sasi-642748200/",
+      behance: "https://www.behance.net/akilcs"
     },
     {
-      name: "Reyvanth",
-      role: "Frontend Developer",
-      bio: "Frontend developer with a love for clean APIs and robust system architecture.",
+      name: "Reyvanth M",
+      role: "Contributor",
+      bio: "Frontend wizard who toasts pixels to perfection and layers clean APIs like a bagel with just the right spread.",
       image: "/team/member4.jpg",
-      github: "https://github.com/emilyzhang",
-      linkedin: "https://linkedin.com/in/emilyzhang"
+      github: "https://github.com/reyvanthm",
+      linkedin: "https://www.linkedin.com/in/reyvanth-m/"
     },
     {
       name: "Rahul MS",
-      role: "Full-Stack Engineer", 
-      bio: "Full-stack developer with a love for clean APIs and robust system architecture.",
+      role: "Contributor",
+      bio: "Full-stack baker kneading backend and frontend together into a smooth, robust experience. Loves a fresh deployment every morning.",
       image: "/team/member5.jpg",
-      github: "https://github.com/davidkim",
-      linkedin: "https://linkedin.com/in/davidkim"
+      github: "https://github.com/msrahul6111",
+      linkedin: "https://www.linkedin.com/in/msrahul/"
     },
     {
       name: "Sahil Titto",
-      role: "Frontend Developer",
-      bio: "Frontend developer with a love for clean APIs and robust system architecture.",
+      role: "Contributor",
+      bio: "Frontend developer spreading joy one interface at a time. Always ensures the app looks as good as your favorite bagel.",
       image: "/team/member6.jpg",
-      github: "https://github.com/lunamartinez",
-      linkedin: "https://linkedin.com/in/lunamartinez"
+      github: "https://github.com/st1120",
+      linkedin: "https://www.linkedin.com/in/sahil-titto/"
     }
   ];
 
   return (
-    <section id="team" className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <section id="team" className="py-20 px-8 sm:px-12 lg:px-16 relative overflow-hidden">
       {/* Subtle bagel background elements */}
       <div className="absolute inset-0 opacity-2 dark:opacity-3">
         {/* Large bagel */}
@@ -155,22 +205,56 @@ const Team = () => {
 
                 {/* Social Links */}
                 <div className="flex justify-center gap-3 mt-6">
-                  <a
-                    href={member.github}
-                    target="_blank"
-                    rel="noopener noreferrer" 
-                    className="p-2 rounded-full hover:bg-warm-yellow/10 transition-colors group/social"
-                  >
-                    <Github className="h-4 w-4 text-neutral-gray/60 dark:text-cream/60 group-hover/social:text-warm-yellow transition-colors" />
-                  </a>
-                  <a
-                    href={member.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-2 rounded-full hover:bg-warm-yellow/10 transition-colors group/social"
-                  >
-                    <Linkedin className="h-4 w-4 text-neutral-gray/60 dark:text-cream/60 group-hover/social:text-warm-yellow transition-colors" />
-                  </a>
+                  {member.github && (
+                    <a
+                      href={member.github}
+                      target="_blank"
+                      rel="noopener noreferrer" 
+                      className="p-2 rounded-full hover:bg-warm-yellow/10 transition-colors group/social"
+                    >
+                      <Github className="h-4 w-4 text-neutral-gray/60 dark:text-cream/60 group-hover/social:text-warm-yellow transition-colors" />
+                    </a>
+                  )}
+                  {member.linkedin && (
+                    <a
+                      href={member.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2 rounded-full hover:bg-warm-yellow/10 transition-colors group/social"
+                    >
+                      <Linkedin className="h-4 w-4 text-neutral-gray/60 dark:text-cream/60 group-hover/social:text-warm-yellow transition-colors" />
+                    </a>
+                  )}
+                  {member.behance && (
+                    <a
+                      href={member.behance}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2 rounded-full hover:bg-warm-yellow/10 transition-colors group/social"
+                    >
+                      <BehanceIcon className="h-4 w-4 text-neutral-gray/60 dark:text-cream/60 group-hover/social:text-warm-yellow transition-colors" />
+                    </a>
+                  )}
+                  {member.hashnode && (
+                    <a
+                      href={member.hashnode}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2 rounded-full hover:bg-warm-yellow/10 transition-colors group/social"
+                    >
+                      <HashnodeIcon className="h-4 w-4 text-neutral-gray/60 dark:text-cream/60 group-hover/social:text-warm-yellow transition-colors" />
+                    </a>
+                  )}
+                  {member.x && (
+                    <a
+                      href={member.x}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2 rounded-full hover:bg-warm-yellow/10 transition-colors group/social"
+                    >
+                      <XIcon className="h-4 w-4 text-neutral-gray/60 dark:text-cream/60 group-hover/social:text-warm-yellow transition-colors" />
+                    </a>
+                  )}
                 </div>
               </div>
             </div>

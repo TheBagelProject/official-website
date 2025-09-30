@@ -34,7 +34,7 @@ const Footer = () => {
   return (
     <footer className="bg-neutral-gray dark:bg-dark-gray text-cream border-t border-neutral-gray/20 dark:border-cream/10">
       {/* Main Footer */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           
           {/* Brand Section */}

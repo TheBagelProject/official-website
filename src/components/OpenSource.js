@@ -3,7 +3,7 @@ import { Github, Star, GitFork, Heart, ExternalLink } from 'lucide-react';
 
 const OpenSource = () => {
   return (
-    <section id="open-source" className="py-20 px-4 sm:px-6 lg:px-8 relative">
+    <section id="open-source" className="py-20 px-8 sm:px-12 lg:px-16 relative">
       {/* Subtle bagel background elements */}
       <div className="absolute inset-0 opacity-2 dark:opacity-3">
         {/* Large bagel */}

@@ -17,7 +17,7 @@ const Header = ({ darkMode, toggleDarkMode }) => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-opacity-90 dark:bg-opacity-90 bg-cream dark:bg-dark-gray border-b border-neutral-gray/10 dark:border-cream/10">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
@@ -127,7 +127,7 @@ const Header = ({ darkMode, toggleDarkMode }) => {
             ? 'max-h-96 opacity-100' 
             : 'max-h-0 opacity-0'
         } overflow-hidden`}>
-          <div className="px-4 py-6 bg-cream/95 dark:bg-dark-gray/95 backdrop-blur-md border-t border-neutral-gray/10 dark:border-cream/10">
+          <div className="px-8 py-6 bg-cream/95 dark:bg-dark-gray/95 backdrop-blur-md border-t border-neutral-gray/10 dark:border-cream/10">
             
             {/* Navigation Links */}
             <div className="space-y-4 mb-6">
