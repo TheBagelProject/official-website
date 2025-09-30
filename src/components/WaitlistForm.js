@@ -51,25 +51,14 @@ const WaitlistForm = () => {
     }
     
     try {
-      // Debug: Log the data being sent
       const payload = {
         name: data.name,
         email: data.email,
         waitingExperience: data.waitingExperience,
         currentWorkflow: data.currentWorkflow,
         recentDelays: data.recentDelays,
-        timestamp: new Date().toLocaleString('en-US', { 
-          year: 'numeric', 
-          month: 'short', 
-          day: '2-digit', 
-          hour: '2-digit', 
-          minute: '2-digit', 
-          second: '2-digit',
-          hour12: true 
-        })
+        timestamp: new Date().toISOString()
       };
-      
-      console.log('Sending data to Google Sheets:', payload);
       
       await fetch(GOOGLE_SHEETS_URL, {
         method: 'POST',
@@ -79,12 +68,15 @@ const WaitlistForm = () => {
         },
         body: JSON.stringify(payload)
       });
+      
+      // With no-cors mode, we can't check response status or read response
+      // Google Apps Script will still process the request
+      // We'll assume success if no network error occurs
 
-      // Since we're using no-cors, we can't check the response status
-      // We'll assume success if no error is thrown
       return true;
     } catch (error) {
-      console.error('Error submitting to Google Sheets:', error);
+      // Log generic error without exposing sensitive URLs
+      console.error('Form submission failed. Please try again.');
       throw error;
     }
   };
@@ -109,8 +101,8 @@ const WaitlistForm = () => {
         recentDelays: ''
       });
     } catch (error) {
-      console.error('Submission failed:', error);
-      // For now, we'll still show success since Google Sheets with no-cors doesn't give us proper feedback
+      // Show success anyway since no-cors mode prevents proper error detection
+      // and we don't want to expose internal errors to users
       setShowSuccess(true);
       setFormData({
         name: '',

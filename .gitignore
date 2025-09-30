@@ -19,6 +19,7 @@ node_modules/
 
 # Google Sheets setup (contains sensitive setup instructions)
 GOOGLE_SHEETS_SETUP.md
+EMAIL_AUTOMATION_SETUP.md
 
 # Firebase
 .firebase/
