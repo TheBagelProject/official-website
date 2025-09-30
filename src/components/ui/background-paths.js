@@ -48,9 +48,31 @@ function FloatingPaths({ position }) {
 
 export function BackgroundPaths() {
     return (
-        <div className="absolute inset-0 overflow-hidden opacity-70 dark:opacity-50">
-            <FloatingPaths position={1} />
-            <FloatingPaths position={-1} />
+        <div className="absolute inset-0 w-full h-[150vh] pointer-events-none overflow-visible">
+            {/* Main animation area with extended height */}
+            <div className="absolute inset-0 w-full h-full">
+                <div className="absolute inset-0 opacity-70 dark:opacity-50">
+                    <FloatingPaths position={1} />
+                    <FloatingPaths position={-1} />
+                </div>
+                
+                {/* Gradient overlay to fade into next section */}
+                <div className="absolute inset-0 w-full h-full">
+                    {/* Light mode gradient */}
+                    <div className="absolute inset-0 dark:hidden"
+                         style={{
+                             background: 'linear-gradient(to bottom, transparent 0%, transparent 50%, rgba(242, 236, 221, 0.2) 70%, rgba(242, 236, 221, 0.6) 85%, rgba(242, 236, 221, 0.9) 95%, rgba(242, 236, 221, 1) 100%)'
+                         }}
+                    />
+                    
+                    {/* Dark mode gradient */}
+                    <div className="absolute inset-0 hidden dark:block"
+                         style={{
+                             background: 'linear-gradient(to bottom, transparent 0%, transparent 50%, rgba(11, 11, 11, 0.2) 70%, rgba(11, 11, 11, 0.6) 85%, rgba(11, 11, 11, 0.9) 95%, rgba(11, 11, 11, 1) 100%)'
+                         }}
+                    />
+                </div>
+            </div>
         </div>
     );
 }

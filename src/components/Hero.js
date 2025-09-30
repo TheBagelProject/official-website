@@ -4,8 +4,8 @@ import { BackgroundPaths } from './ui/background-paths';
 
 const Hero = () => {
   return (
-    <section className="relative pt-24 pb-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      {/* Animated Background */}
+    <section className="relative pt-24 pb-32 px-4 sm:px-6 lg:px-8">
+      {/* Animated Background - extends beyond section */}
       <BackgroundPaths />
       
       <div className="max-w-7xl mx-auto relative z-10">
