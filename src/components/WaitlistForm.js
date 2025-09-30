@@ -5,8 +5,9 @@ const WaitlistForm = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    howItHelps: '',
-    problemSolving: ''
+    waitingExperience: '',
+    currentWorkflow: '',
+    recentDelays: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
@@ -25,12 +26,16 @@ const WaitlistForm = () => {
       newErrors.email = 'Please enter a valid email address';
     }
 
-    if (!formData.howItHelps.trim()) {
-      newErrors.howItHelps = 'Please tell us how this would help you';
+    if (!formData.waitingExperience.trim()) {
+      newErrors.waitingExperience = 'Please share your waiting experience';
     }
 
-    if (!formData.problemSolving.trim()) {
-      newErrors.problemSolving = 'Please describe the problem you\'re solving';
+    if (!formData.currentWorkflow.trim()) {
+      newErrors.currentWorkflow = 'Please describe your current workflow';
+    }
+
+    if (!formData.recentDelays.trim()) {
+      newErrors.recentDelays = 'Please tell us about recent delays';
     }
 
     setErrors(newErrors);
@@ -46,19 +51,33 @@ const WaitlistForm = () => {
     }
     
     try {
+      // Debug: Log the data being sent
+      const payload = {
+        name: data.name,
+        email: data.email,
+        waitingExperience: data.waitingExperience,
+        currentWorkflow: data.currentWorkflow,
+        recentDelays: data.recentDelays,
+        timestamp: new Date().toLocaleString('en-US', { 
+          year: 'numeric', 
+          month: 'short', 
+          day: '2-digit', 
+          hour: '2-digit', 
+          minute: '2-digit', 
+          second: '2-digit',
+          hour12: true 
+        })
+      };
+      
+      console.log('Sending data to Google Sheets:', payload);
+      
       await fetch(GOOGLE_SHEETS_URL, {
         method: 'POST',
         mode: 'no-cors',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          name: data.name,
-          email: data.email,
-          howItHelps: data.howItHelps,
-          problemSolving: data.problemSolving,
-          timestamp: new Date().toISOString()
-        })
+        body: JSON.stringify(payload)
       });
 
       // Since we're using no-cors, we can't check the response status
@@ -85,8 +104,9 @@ const WaitlistForm = () => {
       setFormData({
         name: '',
         email: '',
-        howItHelps: '',
-        problemSolving: ''
+        waitingExperience: '',
+        currentWorkflow: '',
+        recentDelays: ''
       });
     } catch (error) {
       console.error('Submission failed:', error);
@@ -95,8 +115,9 @@ const WaitlistForm = () => {
       setFormData({
         name: '',
         email: '',
-        howItHelps: '',
-        problemSolving: ''
+        waitingExperience: '',
+        currentWorkflow: '',
+        recentDelays: ''
       });
     } finally {
       setIsSubmitting(false);
@@ -219,56 +240,92 @@ const WaitlistForm = () => {
               </div>
             </div>
 
-            {/* How it helps field */}
+            {/* Waiting Experience Field */}
             <div>
-              <label htmlFor="howItHelps" className="block text-sm font-medium text-neutral-gray dark:text-cream mb-2">
+              <label htmlFor="waitingExperience" className="block text-sm font-medium text-neutral-gray dark:text-cream mb-2">
                 <MessageSquare className="h-4 w-4 inline mr-2" />
-                How do you think this would help you?
+                When was the last time you had to wait for someone else to set up infrastructure?
               </label>
               <textarea
-                id="howItHelps"
-                name="howItHelps"
+                id="waitingExperience"
+                name="waitingExperience"
                 rows="4"
-                value={formData.howItHelps}
+                value={formData.waitingExperience}
                 onChange={handleInputChange}
                 className={`w-full px-4 py-3 rounded-2xl border ${
-                  errors.howItHelps 
+                  errors.waitingExperience 
                     ? 'border-red-300 focus:border-red-500' 
                     : 'border-neutral-gray/20 focus:border-warm-yellow'
                 } bg-white/50 dark:bg-neutral-gray/30 text-neutral-gray dark:text-cream placeholder-neutral-gray/50 dark:placeholder-cream/50 focus:outline-none focus:ring-2 focus:ring-warm-yellow/20 transition-colors resize-none`}
-                placeholder="Tell us how Bagel would help streamline your infrastructure deployment workflow..."
+                placeholder="Describe the last time you waited for DevOps or another team to provision an environment."
               />
-              {errors.howItHelps && (
+              <p className="mt-1 text-xs text-neutral-gray/60 dark:text-cream/60">
+                Share the situation, delays, or frustrations. We'd like to hear real stories!
+              </p>
+              {errors.waitingExperience && (
                 <p className="mt-1 text-sm text-red-500 flex items-center gap-1">
                   <AlertCircle className="h-4 w-4" />
-                  {errors.howItHelps}
+                  {errors.waitingExperience}
                 </p>
               )}
             </div>
 
-            {/* Problem solving field */}
+            {/* Current Workflow Field */}
             <div>
-              <label htmlFor="problemSolving" className="block text-sm font-medium text-neutral-gray dark:text-cream mb-2">
+              <label htmlFor="currentWorkflow" className="block text-sm font-medium text-neutral-gray dark:text-cream mb-2">
                 <MessageSquare className="h-4 w-4 inline mr-2" />
-                What problem are you solving with this?
+                How do you currently set up infrastructure to test your apps?
               </label>
               <textarea
-                id="problemSolving"
-                name="problemSolving"
+                id="currentWorkflow"
+                name="currentWorkflow"
                 rows="4"
-                value={formData.problemSolving}
+                value={formData.currentWorkflow}
                 onChange={handleInputChange}
                 className={`w-full px-4 py-3 rounded-2xl border ${
-                  errors.problemSolving 
+                  errors.currentWorkflow 
                     ? 'border-red-300 focus:border-red-500' 
                     : 'border-neutral-gray/20 focus:border-warm-yellow'
                 } bg-white/50 dark:bg-neutral-gray/30 text-neutral-gray dark:text-cream placeholder-neutral-gray/50 dark:placeholder-cream/50 focus:outline-none focus:ring-2 focus:ring-warm-yellow/20 transition-colors resize-none`}
-                placeholder="Describe the infrastructure challenges you're currently facing..."
+                placeholder="Your current workflow or tools for setting up test environments."
               />
-              {errors.problemSolving && (
+              <p className="mt-1 text-xs text-neutral-gray/60 dark:text-cream/60">
+                Maybe include scripts, Terraform workflows, or manual steps you use.
+              </p>
+              {errors.currentWorkflow && (
                 <p className="mt-1 text-sm text-red-500 flex items-center gap-1">
                   <AlertCircle className="h-4 w-4" />
-                  {errors.problemSolving}
+                  {errors.currentWorkflow}
+                </p>
+              )}
+            </div>
+
+            {/* Recent Delays Field */}
+            <div>
+              <label htmlFor="recentDelays" className="block text-sm font-medium text-neutral-gray dark:text-cream mb-2">
+                <MessageSquare className="h-4 w-4 inline mr-2" />
+                Tell us about a recent time when infrastructure setup slowed down your work.
+              </label>
+              <textarea
+                id="recentDelays"
+                name="recentDelays"
+                rows="4"
+                value={formData.recentDelays}
+                onChange={handleInputChange}
+                className={`w-full px-4 py-3 rounded-2xl border ${
+                  errors.recentDelays 
+                    ? 'border-red-300 focus:border-red-500' 
+                    : 'border-neutral-gray/20 focus:border-warm-yellow'
+                } bg-white/50 dark:bg-neutral-gray/30 text-neutral-gray dark:text-cream placeholder-neutral-gray/50 dark:placeholder-cream/50 focus:outline-none focus:ring-2 focus:ring-warm-yellow/20 transition-colors resize-none`}
+                placeholder="A specific deployment or project where delays happened."
+              />
+              <p className="mt-1 text-xs text-neutral-gray/60 dark:text-cream/60">
+                The more details, the better. It helps us understand developer pain points.
+              </p>
+              {errors.recentDelays && (
+                <p className="mt-1 text-sm text-red-500 flex items-center gap-1">
+                  <AlertCircle className="h-4 w-4" />
+                  {errors.recentDelays}
                 </p>
               )}
             </div>
