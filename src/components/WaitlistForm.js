@@ -166,10 +166,10 @@ const WaitlistForm = () => {
             <span className="text-warm-yellow font-medium">Early Access</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-neutral-gray dark:text-cream mb-6">
-            Join the Waitlist
+            Reserve Your Table
           </h2>
           <p className="text-xl text-neutral-gray/70 dark:text-cream/70 max-w-2xl mx-auto">
-            Be among the first to experience the easiest way to deploy infrastructure. Get early access and help shape the future of Bagel.
+            Your seat at the table awaits! Join the waitlist to try Bagel v1.0 fresh out of the oven, and help shape the flavor of future releases.
           </p>
         </div>
 

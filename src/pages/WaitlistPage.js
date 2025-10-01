@@ -41,8 +41,7 @@ const WaitlistPage = () => {
         </h1>
         
         <p className="text-lg md:text-xl dark:text-cream/80 text-neutral-gray/80 max-w-3xl mx-auto leading-relaxed mb-10">
-          Be among the first to experience Bagel's revolutionary approach to infrastructure provisioning. 
-          We'll notify you as soon as early access becomes available.
+          Be among the first to experience Bagel's official release. We'll notify you as soon as v1.0 is ready. Until then, you can play around with our development version today.
         </p>
 
         <div className="flex flex-wrap justify-center gap-6 md:gap-8 text-sm dark:text-cream/60 text-neutral-gray/60 mb-16">
@@ -50,7 +49,7 @@ const WaitlistPage = () => {
             <svg className="w-5 h-5 mr-2 text-warm-yellow" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
             </svg>
-            Priority early access
+            Be first to try the official release
           </div>
           <div className="flex items-center">
             <svg className="w-5 h-5 mr-2 text-warm-yellow" fill="currentColor" viewBox="0 0 20 20">
@@ -62,7 +61,7 @@ const WaitlistPage = () => {
             <svg className="w-5 h-5 mr-2 text-warm-yellow" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
             </svg>
-            No spam, unsubscribe anytime
+            No spam
           </div>
         </div>
       </div>
@@ -96,7 +95,7 @@ const WaitlistPage = () => {
                 <span className="flex items-center justify-center w-8 h-8 rounded-full bg-warm-yellow text-dark-gray font-bold text-sm mr-3">3</span>
                 <h4 className="font-semibold">Early Access</h4>
               </div>
-              <p className="text-sm dark:text-cream/70 text-neutral-gray/70">Bagel is fresh out of the oven! Play around with our dev version today, and join our waitlist to be the first to experience Bagel's official release when it's ready.</p>
+              <p className="text-sm dark:text-cream/70 text-neutral-gray/70">Bagel's development version is already fresh out of the oven! Try it today with Docker Compose, and join the waitlist to be the first to experience our official release when it's ready.</p>
             </div>
           </div>
         </div>

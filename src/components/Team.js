@@ -66,8 +66,8 @@ const Team = () => {
       role: "Contributor",
       bio: "Head of Engineering who layers elegant code like a perfectly toasted bagel. Keeps the backend fresh and smooth.",
       image: "/team/member2.jpg",
-      github: "https://github.com/sarahjohnson",
-      linkedin: "https://linkedin.com/in/sarahjohnson"
+      github: "https://github.com/sangeethpromod",
+      linkedin: "https://www.linkedin.com/in/sangeeth-promod-68b5371a9/"
     },
     {
       name: "Akhil Sasi",

@@ -146,7 +146,7 @@ const OpenSource = () => {
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
-                    href="https://github.com/bagel-org/bagel"
+                    href="https://github.com/TheBagelProject"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-3 bg-gradient-to-r from-warm-yellow to-golden-brown text-neutral-gray px-6 py-3 rounded-2xl font-medium hover:shadow-lg transition-all duration-300 hover:scale-105 justify-center"
@@ -157,7 +157,7 @@ const OpenSource = () => {
                   </a>
                   
                   <a
-                    href="https://github.com/bagel-org/bagel/blob/main/CONTRIBUTING.md"
+                    href="https://github.com/TheBagelProject/bagel/blob/main/CONTRIBUTING.md"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-3 border-2 border-warm-yellow text-warm-yellow px-6 py-3 rounded-2xl font-medium hover:bg-warm-yellow hover:text-neutral-gray transition-all duration-300 justify-center"

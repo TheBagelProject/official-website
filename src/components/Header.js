@@ -83,7 +83,7 @@ const Header = ({ darkMode, toggleDarkMode }) => {
               )}
             </button>
             <a
-              href="https://github.com/bagel-org/bagel"
+              href="https://github.com/TheBagelProject"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-full hover:bg-warm-yellow/10 transition-colors"
@@ -195,7 +195,7 @@ const Header = ({ darkMode, toggleDarkMode }) => {
               </Link>
               
               <a
-                href="https://github.com/bagel-org/bagel"
+                href="https://github.com/TheBagelProject"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={closeMobileMenu}

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { UserPlus, ArrowRight, CheckCircle } from 'lucide-react';
+import { UserPlus, CheckCircle } from 'lucide-react';
 import Hero from '../components/Hero';
 import HowItWorks from '../components/HowItWorks';
 import Features from '../components/Features';
@@ -42,25 +42,17 @@ const HomePage = () => {
             </h2>
             
             <p className="text-xl mb-8 dark:text-cream/80 text-neutral-gray/80 max-w-2xl mx-auto leading-relaxed">
-              Join our waitlist to be among the first to experience Bagel's powerful infrastructure provisioning platform.
+              Join our waitlist to be the first to try Bagel's official release when it's ready. In the meantime, you can already explore our development version with Docker Compose.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex justify-center">
               <Link
                 to="/waitlist"
                 className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-warm-yellow to-golden-brown text-neutral-gray font-medium rounded-2xl hover:shadow-lg transition-all duration-300 gap-2"
               >
                 <UserPlus className="h-4 w-4" />
-                Join Waitlist
+                Save My Spot
               </Link>
-              
-              <a
-                href="#how-it-works"
-                className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3 border-2 border-warm-yellow text-warm-yellow hover:bg-warm-yellow hover:text-dark-gray font-medium rounded-2xl transition-all duration-300 gap-2"
-              >
-                Learn More
-                <ArrowRight className="w-4 h-4" />
-              </a>
             </div>
             
             <div className="mt-12 flex flex-wrap justify-center gap-8 text-sm dark:text-cream/60 text-neutral-gray/60">
