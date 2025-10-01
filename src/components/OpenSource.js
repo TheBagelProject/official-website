@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Github, Star, GitFork, Heart, ExternalLink } from 'lucide-react';
+import { Github, Heart, ExternalLink } from 'lucide-react';
 
 const OpenSource = () => {
   return (
