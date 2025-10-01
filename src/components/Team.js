@@ -166,7 +166,9 @@ const Team = () => {
               className="group animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="bg-white/60 dark:bg-neutral-gray/40 backdrop-blur-sm rounded-3xl p-6 hover:shadow-xl transition-all duration-300 hover:scale-102 border border-neutral-gray/5 dark:border-cream/5">
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-warm-yellow/10 to-golden-brown/5 rounded-2xl blur opacity-75 group-hover:opacity-100 transition-all duration-500"></div>
+                <div className="relative bg-white/60 dark:bg-neutral-gray/20 backdrop-blur-sm rounded-2xl p-6 border border-warm-yellow/10 hover:border-warm-yellow/30 transition-all duration-300 hover:transform hover:scale-[1.02] hover:shadow-xl">
                 
                 {/* Profile Image */}
                 <div className="relative mb-6">
@@ -255,6 +257,7 @@ const Team = () => {
                       <XIcon className="h-4 w-4 text-neutral-gray/60 dark:text-cream/60 group-hover/social:text-warm-yellow transition-colors" />
                     </a>
                   )}
+                </div>
                 </div>
               </div>
             </div>

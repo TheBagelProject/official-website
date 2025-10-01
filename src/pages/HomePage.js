@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { UserPlus, CheckCircle } from 'lucide-react';
 import Hero from '../components/Hero';
+import About from '../components/About';
 import HowItWorks from '../components/HowItWorks';
 import Features from '../components/Features';
 import Showcase from '../components/Showcase';
@@ -17,6 +18,7 @@ const HomePage = () => {
   return (
     <>
       <Hero />
+      <About />
       <HowItWorks />
       <Features />
       <Showcase />

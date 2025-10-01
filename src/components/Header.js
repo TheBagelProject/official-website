@@ -21,7 +21,12 @@ const Header = ({ darkMode, toggleDarkMode }) => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <Link to="/">
+            <Link 
+              to="/" 
+              onClick={() => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+            >
               <img 
                 src={darkMode ? "/Logo/Bagel-v1.0.1-DarkMode.png" : "/Logo/Bagel-v1.0.1-LightMode.png"} 
                 alt="Bagel Logo" 
@@ -208,8 +213,11 @@ const Header = ({ darkMode, toggleDarkMode }) => {
 
             {/* Decorative Element */}
             <div className="mt-6 pt-4 border-t border-neutral-gray/20 dark:border-cream/20">
-              <div className="flex justify-center">
+              <div className="flex flex-col items-center space-y-3">
                 <div className="w-12 h-1 bg-gradient-to-r from-warm-yellow to-golden-brown rounded-full opacity-30"></div>
+                <p className="text-xs text-neutral-gray/60 dark:text-cream/60 font-medium">
+                  Crafted with passion, served with pride
+                </p>
               </div>
             </div>
           </div>

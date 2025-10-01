@@ -143,11 +143,13 @@ const Footer = () => {
             
             {/* Copyright */}
             <div className="flex flex-col sm:flex-row items-center gap-2 text-center sm:text-left">
-              <div className="flex items-center gap-2 text-cream/70 text-sm">
-                <span>© {currentYear} Bagel.</span>
-                <span>Made with</span>
-                <Heart className="h-4 w-4 text-red-400 animate-pulse" />
-                <span>for the open source community</span>
+              <div className="text-cream/70 text-sm">
+                <div className="mb-1 sm:mb-0 sm:inline">© {currentYear} Bagel.</div>
+                <div className="flex items-center justify-center sm:inline-flex gap-1 sm:ml-2">
+                  <span>Made with</span>
+                  <Heart className="h-4 w-4 text-red-400 animate-pulse" />
+                  <span>for the open source community</span>
+                </div>
               </div>
             </div>
 
@@ -171,7 +173,7 @@ const Footer = () => {
           <div className="mt-10 text-center">
             <div className="inline-flex items-center gap-3 text-cream/40 text-sm bg-cream/5 px-6 py-3 rounded-full border border-cream/10">
               <div className="w-2 h-2 bg-warm-yellow/50 rounded-full animate-pulse"></div>
-              <span className="font-medium">Freshly baked infrastructure, served daily</span>
+              <span className="font-medium">Freshly baked infrastructure</span>
               <div className="w-2 h-2 bg-golden-brown/50 rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
             </div>
           </div>

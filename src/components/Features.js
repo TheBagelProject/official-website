@@ -54,41 +54,34 @@ const Features = () => {
           {features.map((feature, index) => (
             <div 
               key={index}
-              className="group animate-slide-up hover:scale-105 transition-all duration-300"
+              className="group animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="bg-white/60 dark:bg-neutral-gray/40 backdrop-blur-sm rounded-3xl p-8 h-full hover:shadow-2xl transition-all duration-300 border border-neutral-gray/10 dark:border-cream/10">
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-warm-yellow/10 to-golden-brown/5 rounded-2xl blur opacity-75 group-hover:opacity-100 transition-all duration-500"></div>
+                <div className="relative bg-white/60 dark:bg-neutral-gray/20 backdrop-blur-sm rounded-2xl p-6 h-full border border-warm-yellow/10 hover:border-warm-yellow/30 transition-all duration-300 hover:transform hover:scale-[1.02] hover:shadow-xl">
                 
                 {/* Icon Container */}
-                <div className="mb-6">
-                  <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${feature.gradient} text-neutral-gray shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-warm-yellow/20 to-golden-brown/10 group-hover:from-warm-yellow/30 group-hover:to-golden-brown/20 transition-all duration-300">
                     {feature.icon}
                   </div>
+                  <h3 className="text-xl font-semibold text-neutral-gray dark:text-cream">
+                    {feature.title}
+                  </h3>
                 </div>
 
                 {/* Content */}
-                <div>
-                  <h3 className="text-2xl font-semibold text-neutral-gray dark:text-cream mb-4 group-hover:text-warm-yellow transition-colors">
-                    {feature.title}
-                  </h3>
-                  <p className="text-neutral-gray/70 dark:text-cream/70 leading-relaxed">
-                    {feature.description}
-                  </p>
-                </div>
+                <p className="text-neutral-gray/70 dark:text-cream/70 leading-relaxed">
+                  {feature.description}
+                </p>
 
                 {/* Decorative corner */}
                 <div className="absolute top-4 right-4 w-3 h-3 bg-warm-yellow rounded-full opacity-30 group-hover:opacity-60 transition-opacity"></div>
+                </div>
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Bottom CTA */}
-        <div className="text-center mt-16 animate-fade-in">
-          <div className="inline-flex items-center gap-2 text-warm-yellow font-medium">
-            <span>Fresh features baked daily</span>
-            <div className="w-2 h-2 bg-warm-yellow rounded-full animate-pulse"></div>
-          </div>
         </div>
       </div>
     </section>

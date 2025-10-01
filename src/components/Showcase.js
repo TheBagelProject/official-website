@@ -104,15 +104,19 @@ const Showcase = () => {
 
             {/* CTA */}
             <div className="pt-4">
-              <button className="text-warm-yellow font-medium hover:text-golden-brown transition-colors flex items-center gap-2 group">
+              <a 
+                href="#how-to-start"
+                className="text-warm-yellow font-medium hover:text-golden-brown transition-colors flex items-center gap-2 group cursor-pointer"
+              >
                 Try the demo
                 <Play className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </button>
+              </a>
             </div>
           </div>
         </div>
 
         {/* Bottom Stats */}
+        {/* Commented out until public data is available
         <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 text-center animate-fade-in">
           {[
             { number: "10k+", label: "Deployments" },
@@ -125,6 +129,7 @@ const Showcase = () => {
             </div>
           ))}
         </div>
+        */}
       </div>
     </section>
   );

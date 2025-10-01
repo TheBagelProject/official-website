@@ -52,28 +52,29 @@ const HowItWorks = () => {
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 {/* Step Card */}
-                <div className="bg-white/60 dark:bg-neutral-gray/40 backdrop-blur-sm rounded-3xl p-8 hover:shadow-xl transition-all duration-300 hover:scale-102 border border-neutral-gray/5 dark:border-cream/5">
+                <div className="group relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-warm-yellow/10 to-golden-brown/5 rounded-2xl blur opacity-75 group-hover:opacity-100 transition-all duration-500"></div>
+                  <div className="relative bg-white/60 dark:bg-neutral-gray/20 backdrop-blur-sm rounded-2xl p-6 border border-warm-yellow/10 hover:border-warm-yellow/30 transition-all duration-300 hover:transform hover:scale-[1.02] hover:shadow-xl">
                   
                   {/* Icon with glow effect */}
-                  <div className="flex justify-center mb-8">
-                    <div className={`p-6 rounded-3xl bg-gradient-to-br ${step.color} text-neutral-gray shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}>
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-warm-yellow/20 to-golden-brown/10 group-hover:from-warm-yellow/30 group-hover:to-golden-brown/20 transition-all duration-300">
                       {step.icon}
                     </div>
+                    <h3 className="text-xl font-semibold text-neutral-gray dark:text-cream">
+                      {step.title}
+                    </h3>
                   </div>
 
                   {/* Content */}
-                  <div className="text-center space-y-4">
-                    <h3 className="text-2xl font-semibold text-neutral-gray dark:text-cream group-hover:text-warm-yellow transition-colors duration-300">
-                      {step.title}
-                    </h3>
-                    <p className="text-neutral-gray/70 dark:text-cream/70 leading-relaxed">
-                      {step.description}
-                    </p>
-                  </div>
+                  <p className="text-neutral-gray/70 dark:text-cream/70 leading-relaxed">
+                    {step.description}
+                  </p>
 
                   {/* Subtle corner accent */}
                   <div className="absolute top-4 right-4 w-2 h-2 bg-warm-yellow/20 rounded-full group-hover:bg-warm-yellow/40 transition-colors duration-300"></div>
                   <div className="absolute bottom-4 left-4 w-1.5 h-1.5 bg-golden-brown/15 rounded-full group-hover:bg-golden-brown/30 transition-colors duration-300"></div>
+                  </div>
                 </div>
 
                 {/* Floating connector dots */}

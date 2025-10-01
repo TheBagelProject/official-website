@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Download, Copy, CheckCircle, Terminal, Play } from 'lucide-react';
+import { Download, Copy, CheckCircle, Terminal, Play, FileText } from 'lucide-react';
 
 const HowToGetStarted = () => {
   const [copiedCommand, setCopiedCommand] = useState(false);
@@ -70,21 +70,21 @@ volumes:
     {
       number: "01",
       title: "Download Docker Compose",
-      description: "Get the docker-compose.yml file to set up your Bagel environment",
+      description: "Grab the docker-compose.yml file to spin up your local Bagel development environment. Freshly baked and ready to go!",
       action: "download",
       icon: <Download className="h-6 w-6" />
     },
     {
       number: "02", 
       title: "Run the Command",
-      description: "Execute the docker-compose command in your terminal",
+      description: "Open your terminal, navigate to the docker-compose.yml file, and run the command below to start your Bagel development environment.",
       action: "command",
       icon: <Terminal className="h-6 w-6" />
     },
     {
       number: "03",
       title: "You're Ready!",
-      description: "Your Bagel environment is now running and ready to use",
+      description: "Your Bagel development environment is now running and ready to explore",
       action: "complete",
       icon: <Play className="h-6 w-6" />
     }
@@ -100,10 +100,10 @@ volumes:
             <span className="text-warm-yellow font-medium">Quick Setup</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-neutral-gray dark:text-cream mb-6">
-            How to Get Started
+            How to Get Started <span className="text-2xl text-warm-yellow">(Development Version)</span>
           </h2>
           <p className="text-xl text-neutral-gray/70 dark:text-cream/70 max-w-3xl mx-auto">
-            Get Bagel running in less than 5 minutes with our simple setup process. No complex configuration required.
+            Get Bagel running in less than 5 minutes! No complex setup! Try our development version locally and see Bagel in action.
           </p>
         </div>
 
@@ -115,7 +115,9 @@ volumes:
               className="text-center animate-slide-up"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <div className="bg-white/60 dark:bg-neutral-gray/40 backdrop-blur-sm rounded-3xl p-8 hover:shadow-xl transition-all duration-300 border border-neutral-gray/5 dark:border-cream/5 h-full">
+              <div className="group relative h-full">
+                <div className="absolute inset-0 bg-gradient-to-br from-warm-yellow/10 to-golden-brown/5 rounded-2xl blur opacity-75 group-hover:opacity-100 transition-all duration-500"></div>
+                <div className="relative bg-white/60 dark:bg-neutral-gray/20 backdrop-blur-sm rounded-2xl p-6 h-full border border-warm-yellow/10 hover:border-warm-yellow/30 transition-all duration-300 hover:transform hover:scale-[1.02] hover:shadow-xl">
                 {/* Step Number */}
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-warm-yellow to-golden-brown text-neutral-gray font-bold text-lg rounded-full mb-6">
                   {step.number}
@@ -135,6 +137,7 @@ volumes:
                 <p className="text-neutral-gray/70 dark:text-cream/70 leading-relaxed">
                   {step.description}
                 </p>
+                </div>
               </div>
             </div>
           ))}
@@ -204,9 +207,57 @@ volumes:
             {copiedCommand && (
               <p className="text-sm text-green-600 dark:text-green-400 flex items-center gap-2">
                 <CheckCircle className="h-4 w-4" />
-                Command copied to clipboard!
+                ✓ Command copied to clipboard!
               </p>
             )}
+          </div>
+
+        </div>
+
+        {/* Sample Terraform Files Section */}
+        <div className="mt-16 text-center animate-fade-in">
+          <div className="mb-8">
+            <div className="inline-flex items-center gap-2 mb-4">
+              <FileText className="h-6 w-6 text-warm-yellow" />
+              <span className="text-warm-yellow font-medium">Sample Files</span>
+            </div>
+            <h3 className="text-3xl md:text-4xl font-bold text-neutral-gray dark:text-cream mb-4">
+              Ready-to-Use Terraform Examples
+            </h3>
+            <p className="text-lg text-neutral-gray/70 dark:text-cream/70 max-w-2xl mx-auto">
+              Learn Terraform basics with simple, easy-to-understand examples for common AWS resources.
+            </p>
+          </div>
+
+          {/* Sample Files Card - Centered and Prominent */}
+          <div className="max-w-2xl mx-auto">
+            <div className="bg-gradient-to-br from-warm-yellow/10 to-golden-brown/10 dark:from-warm-yellow/5 dark:to-golden-brown/5 rounded-3xl p-8 border border-warm-yellow/20">
+                
+                {/* Centered Content */}
+                <div className="text-center">
+                  <div className="flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-warm-yellow/20 to-golden-brown/10 mx-auto mb-6">
+                    <FileText className="h-10 w-10 text-warm-yellow" />
+                  </div>
+                  
+                  <h4 className="text-2xl font-semibold text-neutral-gray dark:text-cream mb-4">
+                    Simple AWS Examples
+                  </h4>
+                  
+                  <p className="text-neutral-gray/70 dark:text-cream/70 leading-relaxed mb-8 max-w-md mx-auto">
+                    Basic Terraform configurations for EC2 instances, security groups, S3 buckets, and other fundamental AWS resources.
+                  </p>
+                  
+                  <a
+                    href="https://github.com/TheBagelProject/sample-terraform-files.git"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-3 bg-gradient-to-r from-warm-yellow to-golden-brown text-neutral-gray px-8 py-4 rounded-2xl font-medium hover:shadow-lg transition-all duration-300 hover:scale-105 text-lg"
+                  >
+                    <FileText className="h-6 w-6" />
+                    Browse Examples
+                  </a>
+                </div>
+            </div>
           </div>
         </div>
 
@@ -218,9 +269,8 @@ volumes:
               That's it! 🎉
             </h3>
             <p className="text-lg text-neutral-gray/70 dark:text-cream/70 max-w-2xl mx-auto">
-              Your Bagel environment will be ready in a few moments. 
-              Access the dashboard at <code className="bg-neutral-gray/10 dark:bg-dark-gray/50 px-2 py-1 rounded text-warm-yellow">localhost:3000</code> 
-              and start deploying your infrastructure with ease.
+              Your Bagel <strong className="text-warm-yellow">development environment</strong> will be ready in a few moments. 
+              Access the dashboard at <code className="bg-neutral-gray/10 dark:bg-dark-gray/50 px-2 py-1 rounded text-neutral-gray dark:text-warm-yellow">localhost:3000</code> and start exploring the development version!
             </p>
           </div>
         </div>

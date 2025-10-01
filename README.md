@@ -110,6 +110,6 @@ Just like a master baker perfecting their craft, we've carefully designed each f
   
   **Built with ❤️ by the open source community**
   
-  *Freshly baked infrastructure, served daily* 🥯
+  *Freshly baked infrastructure* 🥯
   
 </div>

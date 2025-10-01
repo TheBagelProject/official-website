@@ -3,8 +3,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import HomePage from './pages/HomePage';
 import WaitlistPage from './pages/WaitlistPage';
+import ContributePage from './pages/ContributePage';
 import NotFoundPage from './pages/NotFoundPage';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -35,9 +37,11 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/waitlist" element={<WaitlistPage />} />
+          <Route path="/contribute" element={<ContributePage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
         <Footer />
+        <ScrollToTop />
       </div>
     </Router>
   );

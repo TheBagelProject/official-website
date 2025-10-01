@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Github, Star, GitFork, Heart, ExternalLink } from 'lucide-react';
 
 const OpenSource = () => {
@@ -50,9 +51,7 @@ const OpenSource = () => {
             <span className="text-warm-yellow font-medium">Open Source</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-neutral-gray dark:text-cream mb-6">
-            Built by the Community, 
-            <br />
-            <span className="text-warm-yellow">For the Community</span>
+            Built for the <span className="text-warm-yellow">Community</span>
           </h2>
           <p className="text-xl text-neutral-gray/70 dark:text-cream/70 max-w-3xl mx-auto">
             Like the finest artisanal bread, Bagel is crafted with love and shared freely. 
@@ -67,23 +66,31 @@ const OpenSource = () => {
           <div className="space-y-8 animate-slide-up">
             
             {/* GitHub Stats Cards */}
+            {/* Commented out until public data is available
             <div className="grid grid-cols-2 gap-4">
-              <div className="bg-white/60 dark:bg-neutral-gray/40 backdrop-blur-sm rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300 border border-neutral-gray/10 dark:border-cream/10">
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-warm-yellow/10 to-golden-brown/5 rounded-2xl blur opacity-75 group-hover:opacity-100 transition-all duration-500"></div>
+                <div className="relative bg-white/60 dark:bg-neutral-gray/20 backdrop-blur-sm rounded-2xl p-6 text-center border border-warm-yellow/10 hover:border-warm-yellow/30 transition-all duration-300 hover:transform hover:scale-[1.02] hover:shadow-xl">
                 <div className="flex items-center justify-center mb-3">
                   <Star className="h-8 w-8 text-warm-yellow" />
                 </div>
                 <div className="text-2xl font-bold text-neutral-gray dark:text-cream">2.3k</div>
                 <div className="text-sm text-neutral-gray/70 dark:text-cream/70">GitHub Stars</div>
+                </div>
               </div>
 
-              <div className="bg-white/60 dark:bg-neutral-gray/40 backdrop-blur-sm rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300 border border-neutral-gray/10 dark:border-cream/10">
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-warm-yellow/10 to-golden-brown/5 rounded-2xl blur opacity-75 group-hover:opacity-100 transition-all duration-500"></div>
+                <div className="relative bg-white/60 dark:bg-neutral-gray/20 backdrop-blur-sm rounded-2xl p-6 text-center border border-warm-yellow/10 hover:border-warm-yellow/30 transition-all duration-300 hover:transform hover:scale-[1.02] hover:shadow-xl">
                 <div className="flex items-center justify-center mb-3">
                   <GitFork className="h-8 w-8 text-golden-brown" />
                 </div>
                 <div className="text-2xl font-bold text-neutral-gray dark:text-cream">400+</div>
                 <div className="text-sm text-neutral-gray/70 dark:text-cream/70">Forks</div>
+                </div>
               </div>
             </div>
+            */}
 
             {/* Community Features */}
             <div className="space-y-6">
@@ -156,14 +163,12 @@ const OpenSource = () => {
                     <ExternalLink className="h-4 w-4" />
                   </a>
                   
-                  <a
-                    href="https://github.com/TheBagelProject/bagel/blob/main/CONTRIBUTING.md"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link
+                    to="/contribute"
                     className="inline-flex items-center gap-3 border-2 border-warm-yellow text-warm-yellow px-6 py-3 rounded-2xl font-medium hover:bg-warm-yellow hover:text-neutral-gray transition-all duration-300 justify-center"
                   >
                     Contribute Guide
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -176,7 +181,7 @@ const OpenSource = () => {
             "Like sharing a recipe that's been in the family for generations, 
             we believe great infrastructure tools should be available to everyone."
           </blockquote>
-          <div className="mt-4 text-warm-yellow font-medium">— The Bagel Team</div>
+          <div className="mt-4 text-warm-yellow font-medium">- The Bagel Team</div>
         </div>
       </div>
     </section>
