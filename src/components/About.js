@@ -24,7 +24,7 @@ const About = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-neutral-gray dark:text-cream mb-4">
               Infrastructure Deployment
             </h2>
-            <h3 className="text-3xl md:text-4xl font-light text-transparent bg-clip-text bg-gradient-to-r from-warm-yellow to-golden-brown mb-6">
+            <h3 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-warm-yellow to-golden-brown mb-6">
               Made Simple
             </h3>
             <p className="text-lg text-neutral-gray/70 dark:text-cream/70 max-w-2xl mx-auto leading-relaxed">
