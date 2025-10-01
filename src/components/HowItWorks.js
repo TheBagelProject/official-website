@@ -27,14 +27,14 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section id="how-it-works" className="py-20 px-8 sm:px-12 lg:px-16">
-      <div className="max-w-7xl mx-auto">
+    <section id="how-it-works" className="py-20 px-8 sm:px-12 lg:px-16 relative">
+      <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-neutral-gray dark:text-cream mb-6">
+        <div className="text-center mb-16 animate-fade-in relative z-20">
+          <h2 className="text-4xl md:text-5xl font-bold text-neutral-gray dark:text-cream mb-6 relative">
             How It Works
           </h2>
-          <p className="text-xl text-neutral-gray/70 dark:text-cream/70 max-w-2xl mx-auto">
+          <p className="text-xl text-neutral-gray/70 dark:text-cream/70 max-w-2xl mx-auto relative">
             Three simple steps to deploy your infrastructure with the warmth of a European bakery
           </p>
         </div>

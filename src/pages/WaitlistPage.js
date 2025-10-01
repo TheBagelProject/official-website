@@ -96,7 +96,7 @@ const WaitlistPage = () => {
                 <span className="flex items-center justify-center w-8 h-8 rounded-full bg-warm-yellow text-dark-gray font-bold text-sm mr-3">3</span>
                 <h4 className="font-semibold">Early Access</h4>
               </div>
-              <p className="text-sm dark:text-cream/70 text-neutral-gray/70">Be first in line when we launch our private beta program.</p>
+              <p className="text-sm dark:text-cream/70 text-neutral-gray/70">Bagel is fresh out of the oven! Play around with our dev version today, and join our waitlist to be the first to experience Bagel's official release when it's ready.</p>
             </div>
           </div>
         </div>
