@@ -55,7 +55,7 @@ const Team = () => {
       name: "Aftab S",
       role: "Creator",
       bio: "DevOps chef baking infrastructure magic for everyone. Loves sprinkling open-source goodness and building a tasty community.",
-      image: "/team/member1.jpg",
+      image: "/team/members/g-aftab.png",
       github: "https://github.com/aftab-s",
       linkedin: "https://www.linkedin.com/in/aftab-s/",
       hashnode: "https://aftabs.hashnode.dev/",
@@ -65,7 +65,7 @@ const Team = () => {
       name: "Sangeeth Promod",
       role: "Contributor",
       bio: "Head of Engineering who layers elegant code like a perfectly toasted bagel. Keeps the backend fresh and smooth.",
-      image: "/team/member2.jpg",
+      image: "/team/members/g-sangeeth.png",
       github: "https://github.com/sangeethpromod",
       linkedin: "https://www.linkedin.com/in/sangeeth-promod-68b5371a9/"
     },
@@ -73,7 +73,7 @@ const Team = () => {
       name: "Akhil Sasi",
       role: "Contributor",
       bio: "Lead Designer spreading the cream cheese of UI/UX over every interface. Believes infrastructure should look as good as it works.",
-      image: "/team/member3.jpg",
+      image: "/team/members/g-akhil.png",
       github: "https://github.com/akhilsasic",
       linkedin: "https://www.linkedin.com/in/akhil-sasi-642748200/",
       behance: "https://www.behance.net/akilcs"
@@ -82,7 +82,7 @@ const Team = () => {
       name: "Reyvanth M",
       role: "Contributor",
       bio: "Frontend wizard who toasts pixels to perfection and layers clean APIs like a bagel with just the right spread.",
-      image: "/team/member4.jpg",
+      image: "/team/members/g-reyvanth.png",
       github: "https://github.com/reyvanthm",
       linkedin: "https://www.linkedin.com/in/reyvanth-m/"
     },
@@ -90,7 +90,7 @@ const Team = () => {
       name: "Rahul MS",
       role: "Contributor",
       bio: "Full-stack baker kneading backend and frontend together into a smooth, robust experience. Loves a fresh deployment every morning.",
-      image: "/team/member5.jpg",
+      image: "/team/members/g-rahul.png",
       github: "https://github.com/msrahul6111",
       linkedin: "https://www.linkedin.com/in/msrahul/"
     },
@@ -98,7 +98,7 @@ const Team = () => {
       name: "Sahil Titto",
       role: "Contributor",
       bio: "Frontend developer spreading joy one interface at a time. Always ensures the app looks as good as your favorite bagel.",
-      image: "/team/member6.jpg",
+      image: "/team/members/g-sahil.png",
       github: "https://github.com/st1120",
       linkedin: "https://www.linkedin.com/in/sahil-titto/"
     }
@@ -173,19 +173,38 @@ const Team = () => {
                 {/* Profile Image */}
                 <div className="relative mb-6">
                   <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-br from-warm-yellow/20 to-golden-brown/20 border-4 border-warm-yellow/30 group-hover:border-warm-yellow/50 transition-all duration-300 overflow-hidden">
-                    {/* Placeholder for monochrome image */}
-                    <div className="w-full h-full bg-gradient-to-br from-neutral-gray/20 to-neutral-gray/40 dark:from-cream/20 dark:to-cream/40 flex items-center justify-center">
-                      <div className="text-4xl font-bold text-neutral-gray/50 dark:text-cream/50">
-                        {member.name.split(' ').map(n => n[0]).join('')}
+                    {member.image ? (
+                      <div className="relative w-full h-full">
+                        {/* Grayscale image (default state) */}
+                        <img 
+                          src={member.image} 
+                          alt={member.name}
+                          className="absolute inset-0 w-full h-full object-cover opacity-100 group-hover:opacity-0 transition-all duration-300"
+                        />
+                        {/* Color image (hover state) - handle different extensions */}
+                        <img 
+                          src={(() => {
+                            const imagePath = member.image.replace('/g-', '/n-');
+                            // Handle extension differences
+                            if (member.name === "Aftab S") return imagePath.replace('.png', '.jpg');
+                            if (member.name === "Sangeeth Promod") return imagePath.replace('.png', '.jpg');
+                            if (member.name === "Rahul MS") return imagePath.replace('.png', '.jpg');
+                            if (member.name === "Reyvanth M") return imagePath.replace('.png', '.jpg');
+                            // Akhil and Sahil keep .png extension
+                            return imagePath;
+                          })()}
+                          alt={member.name}
+                          className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-all duration-300"
+                        />
                       </div>
-                    </div>
-                    {/* When you add actual images, replace the div above with:
-                    <img 
-                      src={member.image} 
-                      alt={member.name}
-                      className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-300"
-                    />
-                    */}
+                    ) : (
+                      /* Fallback for members without images */
+                      <div className="w-full h-full bg-gradient-to-br from-neutral-gray/20 to-neutral-gray/40 dark:from-cream/20 dark:to-cream/40 flex items-center justify-center">
+                        <div className="text-4xl font-bold text-neutral-gray/50 dark:text-cream/50">
+                          {member.name.split(' ').map(n => n[0]).join('')}
+                        </div>
+                      </div>
+                    )}
                   </div>
                   
                   {/* Decorative corner accent */}
