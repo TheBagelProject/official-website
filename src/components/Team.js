@@ -64,10 +64,11 @@ const Team = () => {
     {
       name: "Sangeeth Promod",
       role: "Contributor",
-      bio: "Head of Engineering who layers elegant code like a perfectly toasted bagel. Keeps the backend fresh and smooth.",
+      bio: "Product architect and backend baker - whipping up elegant code and serving a backend baked just right.",
       image: "/team/members/g-sangeeth.png",
       github: "https://github.com/sangeethpromod",
-      linkedin: "https://www.linkedin.com/in/sangeeth-promod-68b5371a9/"
+      linkedin: "https://www.linkedin.com/in/sangeeth-promod-68b5371a9/",
+      x: "https://x.com/sangxxth"
     },
     {
       name: "Akhil Sasi",

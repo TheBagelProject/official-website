@@ -96,6 +96,19 @@ const Header = ({ darkMode, toggleDarkMode }) => {
             >
               <Github className="h-5 w-5 text-neutral-gray dark:text-cream" />
             </a>
+            <a
+              href="https://buymeacoffee.com/thebagelproject"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-90 transition-opacity"
+              aria-label="Buy Me a Coffee"
+            >
+              <img 
+                src="/sponsorship/bmc-button.svg" 
+                alt="Buy Me a Coffee" 
+                className="h-8 w-auto"
+              />
+            </a>
           </div>
 
           {/* Mobile: Hamburger Menu */}
@@ -208,6 +221,20 @@ const Header = ({ darkMode, toggleDarkMode }) => {
               >
                 <Github className="h-4 w-4" />
                 View on GitHub
+              </a>
+              
+              <a
+                href="https://buymeacoffee.com/thebagelproject"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={closeMobileMenu}
+                className="flex items-center justify-center w-full py-2 hover:opacity-90 transition-all duration-300"
+              >
+                <img 
+                  src="/sponsorship/bmc-button.svg" 
+                  alt="Buy Me a Coffee" 
+                  className="h-12 w-auto"
+                />
               </a>
             </div>
 

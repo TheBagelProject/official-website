@@ -66,7 +66,7 @@ const Footer = () => {
             {/* Social Links */}
             <div>
               <h4 className="text-warm-yellow font-medium mb-4 text-sm uppercase tracking-wider">Connect with us</h4>
-              <div className="flex space-x-3">
+              <div className="flex items-center space-x-3">
                 <a
                   href="https://github.com/TheBagelProject"
                   target="_blank"
@@ -100,6 +100,19 @@ const Footer = () => {
                   aria-label="Email"
                 >
                   <Mail className="h-5 w-5 text-cream/70 group-hover:text-warm-yellow transition-colors" />
+                </a>
+                <a
+                  href="https://buymeacoffee.com/thebagelproject"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:opacity-90 transition-all duration-200"
+                  aria-label="Buy Me a Coffee"
+                >
+                  <img 
+                    src="/sponsorship/bmc-button.svg" 
+                    alt="Buy Me a Coffee" 
+                    className="h-8 w-auto"
+                  />
                 </a>
               </div>
             </div>
