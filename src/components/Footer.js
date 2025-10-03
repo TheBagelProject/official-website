@@ -115,7 +115,7 @@ const Footer = () => {
                   />
                 </a>
                 <a
-                  href="https://patreon.com/thebagelproject?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink"
+                  href="https://www.patreon.com/cw/thebagelproject"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-xl bg-cream/5 hover:bg-warm-yellow/10 border border-cream/10 hover:border-warm-yellow/20 transition-all duration-200 group"
