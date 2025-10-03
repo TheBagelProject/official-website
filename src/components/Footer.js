@@ -114,6 +114,19 @@ const Footer = () => {
                     className="h-8 w-auto"
                   />
                 </a>
+                <a
+                  href="https://patreon.com/thebagelproject?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 rounded-xl bg-cream/5 hover:bg-warm-yellow/10 border border-cream/10 hover:border-warm-yellow/20 transition-all duration-200 group"
+                  aria-label="Support us on Patreon"
+                >
+                  <img 
+                    src="/sponsorship/patreon-darkmode.svg" 
+                    alt="Support us on Patreon" 
+                    className="h-5 w-5 opacity-70 group-hover:opacity-100 transition-opacity"
+                  />
+                </a>
               </div>
             </div>
           </div>

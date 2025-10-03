@@ -109,6 +109,19 @@ const Header = ({ darkMode, toggleDarkMode }) => {
                 className="h-8 w-auto"
               />
             </a>
+            <a
+              href="https://patreon.com/thebagelproject?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full hover:bg-warm-yellow/10 transition-colors"
+              aria-label="Support us on Patreon"
+            >
+              <img 
+                src={darkMode ? "/sponsorship/patreon-darkmode.svg" : "/sponsorship/patreon-lightmode.svg"} 
+                alt="Support us on Patreon" 
+                className="h-5 w-5 opacity-80 hover:opacity-100 transition-opacity"
+              />
+            </a>
           </div>
 
           {/* Mobile: Hamburger Menu */}
@@ -235,6 +248,21 @@ const Header = ({ darkMode, toggleDarkMode }) => {
                   alt="Buy Me a Coffee" 
                   className="h-12 w-auto"
                 />
+              </a>
+              
+              <a
+                href="https://patreon.com/thebagelproject?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={closeMobileMenu}
+                className="flex items-center justify-center gap-3 w-full px-6 py-3 border-2 border-red-400 text-red-400 hover:bg-red-400 hover:text-cream font-medium rounded-2xl transition-all duration-300"
+              >
+                <img 
+                  src={darkMode ? "/sponsorship/patreon-darkmode.svg" : "/sponsorship/patreon-lightmode.svg"} 
+                  alt="Patreon" 
+                  className="h-5 w-5"
+                />
+                Support on Patreon
               </a>
             </div>
 
