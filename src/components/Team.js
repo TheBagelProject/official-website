@@ -186,11 +186,11 @@ const Team = () => {
                         <img 
                           src={(() => {
                             const imagePath = member.image.replace('/g-', '/n-');
-                            // Handle extension differences
+                            // Handle extension differences based on actual files
                             if (member.name === "Aftab S") return imagePath.replace('.png', '.jpg');
                             if (member.name === "Sangeeth Promod") return imagePath.replace('.png', '.jpg');
                             if (member.name === "Rahul MS") return imagePath.replace('.png', '.jpg');
-                            if (member.name === "Reyvanth M") return imagePath.replace('.png', '.jpg');
+                            if (member.name === "Reyvanth M") return imagePath; // Keep .png extension
                             // Akhil and Sahil keep .png extension
                             return imagePath;
                           })()}
