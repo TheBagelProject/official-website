@@ -23,6 +23,9 @@ EMAIL_AUTOMATION_SETUP.md
 CORS_FIX_STEPS-1.md
 CONTENT_EXTRACTION.md
 
+# Branding documentation (internal use only)
+BRAND_COLORS.md
+
 # Firebase
 .firebase/
 .firebaserc
