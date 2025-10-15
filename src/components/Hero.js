@@ -34,7 +34,7 @@ const Hero = () => {
               </h1>
               
               <p className="text-lg md:text-xl text-neutral-gray/80 dark:text-cream/80 leading-relaxed">
-                Bagel makes deploying Terraform seamless - no workflow knowledge required.
+                Bagel - the easiest way for developers to manage Terraform infrastructure with confidence.
               </p>
             </div>
 

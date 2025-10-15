@@ -28,7 +28,7 @@ const About = () => {
               Made Simple
             </h3>
             <p className="text-lg text-neutral-gray/70 dark:text-cream/70 max-w-2xl mx-auto leading-relaxed">
-              Bagel is an open-source, self-service platform that transforms complex Terraform infrastructure deployment into a delightful experience. No DevOps expertise required.
+              Bagel is an open-source, self-service platform that makes Terraform-based infrastructure provisioning simple, fast, and intuitive - built for developers who just want to ship.
             </p>
           </div>
 
@@ -47,7 +47,7 @@ const About = () => {
                   </h3>
                 </div>
                 <p className="text-neutral-gray/70 dark:text-cream/70 leading-relaxed">
-                  Deploy infrastructure independently without waiting for DevOps teams. Simple, intuitive, and powerful.
+                  Empower teams to deploy infrastructure seamlessly with minimal dependencies. Simple, intuitive, and powerful.
                 </p>
               </div>
             </div>
